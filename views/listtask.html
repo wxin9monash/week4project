@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table th{
+        background-color: coral;
+    }
+        table,th,td {
+            border: 1px solid black;
+                }
+    </style>
+</head>
+    <body>
+        <h1>List Tasks</h1></br>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Person</th>
+                <th>Due Date</th>
+                <th>Description</th>
+                <th>Status</th>
+            </tr>
+            <% for (let i=0;i<mydata.length;i++){%>
+                <tr>
+                    <td><%=mydata[i].id %> </td>
+                    <td><%=mydata[i].name %> </td>
+                    <td><%=mydata[i].person %> </td>
+                    <td><%=mydata[i].date %> </td>
+                    <td><%=mydata[i].description %> </td>
+                    <td><%=mydata[i].status %> </td>
+                </tr>
+                <%}%>
+        </table>
+        <h1><a href="/">Home</a></h1>
+    </body>
+</html>
